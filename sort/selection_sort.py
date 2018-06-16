@@ -11,7 +11,7 @@ def find_smallest(_list):
         if num < smallest:
             smallest = num
             smallest_idx = idx
-    return smallest
+    return (smallest, smallest_idx)
 
 
 if __name__=='__main__':
