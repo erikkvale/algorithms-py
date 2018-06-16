@@ -23,3 +23,32 @@ int in_manded(double x0, double y0, int n) {
   }
   return 1;
 }
+
+// Divide two numbers
+int divide(int a, int b, int *remainder) {
+  int quot = a / b;
+  *remainder = a % 2;
+  return quot;
+}
+
+
+// Average values in an array
+double avg(double *a, int n) {
+  int i;
+  double total = 0.0;
+  for (i = 0; i < n; i++) {
+    total += a[i];
+  }
+  return total / n;
+}
+
+// C struct to represent point
+typedef struct Point {
+  double x, y;
+}; MyCustomType;
+
+
+// Function involving a C data structure
+double distance(Point *p1, Point *p2) {
+  return hypot(p1->x - p2->x, p1->y - p2->y)
+}
