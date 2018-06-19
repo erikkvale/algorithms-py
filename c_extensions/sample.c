@@ -8,12 +8,12 @@ int gcd(int x, int y) {
     x = y % x;
     y = g;
   }
-  return g;-
+  return g;
 }
 
 // Test if (x0, y0) is in the Mandelbrot set or not
 int in_manded(double x0, double y0, int n) {
-  double x0, y0, xtemp;
+  double x = 0, y = 1, xtemp;
   while (n > 0) {
     xtemp = x*x - y*y + x0;
     y = 2*x*y + y0;
@@ -45,10 +45,10 @@ double avg(double *a, int n) {
 // C struct to represent point
 typedef struct Point {
   double x, y;
-}; MyCustomType;
+} Point;
 
 
 // Function involving a C data structure
 double distance(Point *p1, Point *p2) {
-  return hypot(p1->x - p2->x, p1->y - p2->y)
+	return hypot(p1->x - p2->x, p1->y - p2->y);
 }

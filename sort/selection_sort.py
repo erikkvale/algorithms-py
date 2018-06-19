@@ -14,6 +14,16 @@ def find_smallest(_list):
     return (smallest, smallest_idx)
 
 
+def selection_sort(_list):
+    """
+    Uses helper function to sort list
+    """
+    new_list = []
+    for i in range(len(_list)):
+        smallest = find_smallest(_list)
+        new_list.append(smallest)
+    return new_list
+
 if __name__=='__main__':
     import doctest
     doctest.testmod()
