@@ -16,19 +16,15 @@ def countdown(i):
         countdown(i - 1)
 
 
-def greet(name):
-    print("Hello, {}!".format(name))
-    greet_two(name)
-    print("Getting ready to say goodbye...")
-    bye()
-
-def greet_two(name):
-    print("How are you, {}?".format(name))
-
-def bye():
-    print("Ok, bye")
+def factorial(n):
+    """
+    Factorial, written n! n * (n - 1) * (n - 2) * ... (1)
+    """
+    # Base case
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
 if __name__=='__main__':
-    greet("maggie")
-    # import doctest
-    # doctest.testmod()
+    print(factorial(3))
